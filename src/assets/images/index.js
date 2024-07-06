@@ -9,15 +9,17 @@ import saleImgThree from "./sale/saleImgThree.webp";
 // ============== Products Start here ====================
 import pdf1 from "../pdf/pdf1.pdf";
 // New Arrivals
-import newArrOne from "./products/newArrival/newArrOne.webp";
-import newArrTwo from "./products/newArrival/newArrTwo.webp";
+import newArrOne from "./products/newArrival/newArrOne.jpg";
+import newArrTwo from "./products/newArrival/newArrTwo.avif";
 import newArrThree from "./products/newArrival/newArrThree.webp";
 import newArrFour from "./products/newArrival/newArrFour.webp";
+import newArrFive from "./products/newArrival/newArrFive.jpg";
+import newArrSix from "./products/newArrival/newArrSix.jpg";
 
 // Best Sellers
 import bestSellerOne from "./products/bestSeller/bestSellerOne.webp";
-import bestSellerTwo from "./products/bestSeller/bestSellerTwo.webp";
-import bestSellerThree from "./products/bestSeller/bestSellerThree.webp";
+import bestSellerTwo from "./products/bestSeller/bestSellerTwo.png";
+import bestSellerThree from "./products/bestSeller/bestSellerThree.png";
 import bestSellerFour from "./products/bestSeller/bestSellerFour.webp";
 import imprimante1 from "./products/bestSeller/imprimante1.webp";
 import imprimante2 from "./products/bestSeller/imprimante2.webp";
@@ -90,6 +92,8 @@ export {
   newArrTwo,
   newArrThree,
   newArrFour,
+  newArrFive,
+  newArrSix,
 
   // Best Sellers
   bestSellerOne,

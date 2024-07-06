@@ -5,8 +5,9 @@ import Product from "../Products/Product";
 import {
   newArrOne,
   newArrTwo,
-  newArrThree,
   newArrFour,
+  newArrFive,
+  newArrSix
 } from "../../../assets/images/index";
 import SampleNextArrow from "./SampleNextArrow";
 import SamplePrevArrow from "./SamplePrevArrow";
@@ -53,8 +54,8 @@ const NewArrivals = () => {
         <div className="px-2">
           <Product
             _id="100001"
-            img={newArrOne}
-            productName="Round Table Clock"
+            img={newArrFive}
+            productName="Round watch"
             price="44.00"
             color="Black"
             badge={true}
@@ -64,8 +65,8 @@ const NewArrivals = () => {
         <div className="px-2">
           <Product
             _id="100002"
-            img={newArrTwo}
-            productName="Smart Watch"
+            img={newArrOne}
+            productName="Macbook Laptop "
             price="250.00"
             color="Black"
             badge={true}
@@ -75,8 +76,8 @@ const NewArrivals = () => {
         <div className="px-2">
           <Product
             _id="100003"
-            img={newArrThree}
-            productName="cloth Basket"
+            img={newArrSix}
+            productName="Keyboard"
             price="80.00"
             color="Mixed"
             badge={true}
@@ -87,7 +88,7 @@ const NewArrivals = () => {
           <Product
             _id="100004"
             img={newArrFour}
-            productName="Funny toys for babies"
+            productName="Samsung printer 3510"
             price="60.00"
             color="Mixed"
             badge={false}
@@ -98,7 +99,7 @@ const NewArrivals = () => {
           <Product
             _id="100005"
             img={newArrTwo}
-            productName="Funny toys for babies"
+            productName="Computer workstation"
             price="60.00"
             color="Mixed"
             badge={false}
