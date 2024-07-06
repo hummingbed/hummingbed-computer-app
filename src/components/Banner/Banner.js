@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import {
   bannerImgOne,
-  bannerImgTwo,
-  bannerImgThree,
 } from "../../assets/images";
 import Image from "../designLayouts/Image";
 
@@ -180,9 +178,9 @@ const Banner = () => {
   return (
     <div className="w-full bg-white">
       <Slider {...settings}>
-        {slides.map((slide, index) => (
+        {/* {slides.map((slide, index) => (
           <CustomSlide key={index} {...slide} />
-        ))}
+        ))} */}
       </Slider>
     </div>
   );
