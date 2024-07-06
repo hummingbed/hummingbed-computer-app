@@ -32,7 +32,7 @@ const Header = () => {
           <Link to="/">
             <div>
               
-              Hummingbed-collections
+            Hummingbed-gadget
             </div>
           </Link>
           <div>
