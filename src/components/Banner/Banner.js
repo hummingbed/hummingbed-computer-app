@@ -7,49 +7,23 @@ import {
 import Image from "../designLayouts/Image";
 
 const CustomSlide = ({ Subtext, imgSrc, text, buttonLink, buttonText }) => (
-  <div
-    style={{
-      position: "relative",
-      backgroundColor: "#F5F5F3", // Gray background color
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center", // Center vertically
-    }}
-  >
-    <div
-      style={{
-        maxWidth: "450px", // Adjust the maxWidth as needed
-        marginRight: "100px", // Add margin between text/button and image
-      }}
-    >
-      <h1
-        style={{
-          marginBottom: "15px",
-          fontSize: "2.5rem", // Adjust the font size as needed
-          color: "#000", // Black color
-          fontWeight: "700",
-        }}
-      >
+  <div className="relative bg-gray-100 flex justify-center items-center md:py-12">
+    <div className="max-w-xl md:ml-26 sm:ml-24" >
+      <h1 className="mb-4 text-3xl md:text-4l font-bold text-black">
         {text}
       </h1>
-      <p
-        style={{
-          marginBottom: "25px",
-          fontSize: "1.5rem", // Adjust the font size as needed
-          color: "#666", // Gray color
-        }}
-      >
+      <p className="mb-6 text-lg md:text-4l md:ml-26 sm:mr-24 text-gray-600">
         {Subtext}
       </p>
 
-      <Link to="/about">
+      <Link to={buttonLink}>
         <button className="bg-primeColor text-white text-lg font-bodyFont w-[185px] h-[50px] hover:bg-black duration-300 font-bold">
           {buttonText}
         </button>
       </Link>
     </div>
-    <div style={{ marginLeft: "100px" }}>
-      <Image imgSrc={imgSrc} />
+    <div className="ml-4 md:ml-8 xl:ml-12">
+      <Image className="w-full h-auto" imgSrc={imgSrc} />
     </div>
   </div>
 );
@@ -84,19 +58,19 @@ const Banner = () => {
         style={
           i === dotActive
             ? {
-                width: "30px",
-                color: "#262626",
-                borderRight: "3px #262626 solid",
-                padding: "8px 0",
-                cursor: "pointer",
-              }
+              width: "30px",
+              color: "#262626",
+              borderRight: "3px #262626 solid",
+              padding: "8px 0",
+              cursor: "pointer",
+            }
             : {
-                width: "30px",
-                color: "transparent",
-                borderRight: "3px white solid",
-                padding: "8px 0",
-                cursor: "pointer",
-              }
+              width: "30px",
+              color: "transparent",
+              borderRight: "3px white solid",
+              padding: "8px 0",
+              cursor: "pointer",
+            }
         }
       >
         0{i + 1}
@@ -121,26 +95,11 @@ const Banner = () => {
           ),
           customPaging: (i) => (
             <div
-              style={
-                i === dotActive
-                  ? {
-                      width: "25px",
-                      color: "#262626",
-                      borderRight: "3px #262626 solid",
-                      cursor: "pointer",
-                      fontSize: "12px",
-                    }
-                  : {
-                      width: "25px",
-                      color: "transparent",
-                      borderRight: "3px white solid",
-                      cursor: "pointer",
-                      fontSize: "12px",
-                    }
-              }
-            >
-              0{i + 1}
-            </div>
+              className={`w-6 h-6 ${i === dotActive
+                  ? "bg-gray-800"
+                  : "bg-white"
+                } rounded-full border-2 border-gray-800`}
+            />
           ),
         },
       },
@@ -153,7 +112,7 @@ const Banner = () => {
       text: "Enhance Your Printing Experience",
       Subtext:
         "Explore our premium printers and consumables for exceptional results",
-      buttonLink: "/offer",
+      buttonLink: "/shop",
       buttonText: "Shop Now",
     },
     {
@@ -161,7 +120,7 @@ const Banner = () => {
       text: "Quality Printing Solutions",
       Subtext:
         "Discover our wide range of printers and consumables designed for professional printing needs.",
-      buttonLink: "/shop",
+      buttonLink: "/about",
       buttonText: "About-us",
     },
     {
@@ -176,11 +135,11 @@ const Banner = () => {
     // Add more slides as needed
   ];
   return (
-    <div className="w-full bg-white">
+    <div className="w-full bg-white hidden md:block">
       <Slider {...settings}>
-        {/* {slides.map((slide, index) => (
+        {slides.map((slide, index) => (
           <CustomSlide key={index} {...slide} />
-        ))} */}
+        ))}
       </Slider>
     </div>
   );
